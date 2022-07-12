@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_escuela_ico.Permisos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +7,7 @@ using System.Web.Mvc;
 
 namespace proyecto_escuela_ico.Controllers
 {
+    [ValidarSesion]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -27,12 +29,10 @@ namespace proyecto_escuela_ico.Controllers
             return View();
         }
 
-
-        public ActionResult Login()
+        public ActionResult CerrarSesion()
         {
-           
-
-            return View();
+            Session["usuario"] = null;
+            return RedirectToAction("Login", "Acceso");
         }
 
     }

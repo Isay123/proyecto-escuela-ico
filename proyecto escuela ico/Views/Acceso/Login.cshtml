@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = null;
+}
+
+@Styles.Render("~/styles/css/style.css")
+<style>
+
+    [data-sidebar-position="fixed"][data-layout="vertical"] .nav-header {
+        display: none !important;
+    }
+
+    [data-header-position="fixed"] .header {
+        display: none !important;
+    }
+
+    [data-sidebar-position="fixed"][data-layout="vertical"] .quixnav {
+        position: fixed;
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .contenido-menu {
+        width: 100%;
+        max-width: 1920px;
+        position: relative;
+        margin: 0 auto;
+        height: 100px;
+        background-color: #fff;
+        box-shadow: -1px 11px 15px -5px rgba(0,0,0,0.63);
+        -webkit-box-shadow: -1px 11px 15px -5px rgba(0,0,0,0.63);
+        -moz-box-shadow: -1px 11px 15px -5px rgba(0,0,0,0.63);
+    }
+
+        .contenido-menu img {
+            width: 100%;
+            max-width: 80px;
+            position: relative;
+            top: 10px
+        }
+
+
+    .contenido-footer {
+        width: 100%;
+        max-width: 1920px;
+        position: relative;
+        margin: 0 auto;
+        height: 50px;
+        background-color: #000C26;
+        box-shadow: -1px 11px 15px -5px rgba(0,0,0,0.63);
+        -webkit-box-shadow: -1px 11px 15px -5px rgba(0,0,0,0.63);
+        -moz-box-shadow: -1px 11px 15px -5px rgba(0,0,0,0.63);
+    }
+
+        .contenido-footer p {
+            text-align:center;
+            color:#fff;
+            font-size:17px;
+           font-weight:bold;
+           position:relative;
+           top:10px
+        }
+
+</style>
+
+
+<div class="contenido-menu">
+    <center>
+        <img src="~/styles/img/logo.jpg" />
+    </center>
+
+</div>
+
+<div class="authincation h-100">
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+                <div class="authincation-content">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <h4 class="text-center mb-4" style="color:#fff !important">Iniciar Sesión</h4>
+                                <form action="@Url.Action("Login", "Acceso")" method="post">
+                                    <div class="form-group">
+                                        <label><strong>Email</strong></label>
+                                        <input type="email" name="Correo" class="form-control" placeholder="Correo" >
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label><strong>Password</strong></label>
+                                        <input type="password" name="Clave" class="form-control" placeholder="Contraseña" >
+
+                                    </div>
+                                    @if (ViewData["Mensaje"] != null)
+                                    {
+                                        <div class="alert alert-danger" role="alert">
+                                            @ViewData["Mensaje"]
+                                        </div>
+                                    }
+
+                                    <div class="text-center">
+                                        <button type="submit" name="button" class="btn btn-primary btn-block">Iniciar</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="contenido-footer">
+    <center>
+        <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+    </center>
+
+</div>

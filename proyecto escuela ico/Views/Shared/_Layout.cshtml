@@ -80,7 +80,7 @@
                                     </a>
                                     <a href="./page-login.html" class="dropdown-item">
                                         <i class="icon-key"></i>
-                                        <span class="ml-2">Logout </span>
+                                        <span class="ml-2">@Html.ActionLink("Salir", "CerrarSesion", "Home") </span>
                                     </a>
                                 </div>
                             </li>
@@ -118,9 +118,9 @@
                             <i class="icon icon-users-mm"></i><span class="nav-text">Agregar Alumnos</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="">Agregar Alumnos</a></li>
+                            <li><a >@Html.ActionLink("Alumnos", "CrearAlumnos", "Alumnos")</a></li>
 
-                            <li><a href="">Ver Alumnos</a></li>
+                            <li><a href="#">Ver Alumnos</a></li>
                         </ul>
                     </li>
 

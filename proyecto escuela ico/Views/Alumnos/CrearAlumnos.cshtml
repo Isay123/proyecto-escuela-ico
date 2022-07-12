@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Agregar Alumnos";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <!-- row -->
+        <div class="row">
+            <div class="col-xl-6 col-xxl-12">
+
+
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Crear Alumnos</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+
+                                        @Html.Label("Nombre_Completo:")
+
+                                        <input type="text" class="form-control">
+                                       
+                                    </div>  
+                                    
+                                    <div class="form-group col-md-6">
+                                      
+                                        @Html.Label("Numero de Credencial:")
+
+                                        <input type="text" class="form-control" >
+                                    </div>
+
+
+                                    <div class="form-group col-md-6">
+                                        @Html.Label("Email:")
+
+                                        <input type="email" class="form-control" >
+                                    </div>
+
+
+
+                                    <div class="form-group col-md-6">
+                                        @Html.Label("Contraseña:")
+
+                                        <input type="password" class="form-control" >
+                                    </div> 
+                                    
+                                    <div class="form-group col-md-6">
+                                        @Html.Label("Repetir Contraseña:")
+
+                                        <input type="password" class="form-control" >
+                                    </div>
+                                  
+                                </div>
+                                
+                           
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

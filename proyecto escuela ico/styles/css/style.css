@@ -16874,9 +16874,21 @@ table.dataTable.display tbody td {
     background: #000C26;
     box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
     border-radius: 5px;
-    margin-top: 100px !important;
     width: 1920px;
     max-width: 350px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex;
+    justify-content: center;
+}
+
+.authincation-contentw {
+    background: #000 !important ;
+    box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+    border-radius: 5px;
+    margin-top: 100px !important;
+    width: 1920px;
+    max-width: 650px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     display: flex;
